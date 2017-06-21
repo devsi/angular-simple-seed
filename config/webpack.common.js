@@ -30,6 +30,16 @@ module.exports = {
                 test: /\.scss$/,
                 exclude: /node_modules/,
                 use: [ "raw-loader", "sass-loader" ]
+            },
+            {
+                test: /\.css$/,
+                exclude: helpers.root("src", "app"),
+                use: ExtractTextPlugin.extract({ fallbackLoader: "style-loader", loader: "css-loader?sourceMap" })
+            },
+            {
+                test: /\.css$/,
+                include: helpers.root("src", "app"),
+                use: "raw-loader"
             }
         ]
     },
