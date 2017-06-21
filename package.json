@@ -1,12 +1,7 @@
 {
     "name": "angular-seed",
-    "version": "1.1.0",
+    "version": "0.0.1",
     "description": "Angular Seed",
-    "license": "GPL-3.0",
-    "repository": {
-        "type": "GIT",
-        "url": "https://github.com/Plum-Crazy/angular-seed"
-    },
     "scripts": {
         "start": "webpack-dev-server --inline --config config/webpack.dev.js --progress --port 3000",
         "build": "rimraf dist && webpack --config config/webpack.prod.js --progress --profile --bail"
