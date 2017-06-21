@@ -27,27 +27,9 @@ module.exports = {
                 use: "html-loader"
             },
             {
-                test: /\.pug$/,
-                use: [ "raw-loader", "pug-html-loader" ]
-            },
-            {
                 test: /\.scss$/,
                 exclude: /node_modules/,
                 use: [ "raw-loader", "sass-loader" ]
-            },
-            {
-                test: /\.(png|jpe?g|gif|svg|woff|woff2|otf|ttf|eot|ico)$/,
-                use: "file-loader?name=assets/[name].[hash].[ext]"
-            },
-            {
-                test: /\.css$/,
-                exclude: helpers.root("src", "app"),
-                use: ExtractTextPlugin.extract({ fallbackLoader: "style-loader", loader: "css-loader?sourceMap" })
-            },
-            {
-                test: /\.css$/,
-                include: helpers.root("src", "app"),
-                use: "raw-loader"
             }
         ]
     },
