@@ -3,7 +3,7 @@
     "version": "0.0.1",
     "description": "Angular Seed",
     "scripts": {
-        "start": "webpack-dev-server --inline --config config/webpack.dev.js --progress --port 3000",
+        "start": "webpack-dev-server --inline --config config/webpack.dev.js --progress --port 3001",
         "build": "rimraf dist && webpack --config config/webpack.prod.js --progress --profile --bail"
     },
     "dependencies": {
