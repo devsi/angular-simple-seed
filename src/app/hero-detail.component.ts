@@ -9,7 +9,8 @@ import { HeroService } from './hero.service';
 
 @Component({
     selector: 'hero-detail',
-    templateUrl: './hero-detail.component.html'
+    styleUrls: [ '../styles/styles.scss', '../styles/hero-details.component.scss' ],
+    templateUrl: '../templates/hero-detail.component.html'
 })
 
 export class HeroDetailComponent implements OnInit {
@@ -30,5 +31,10 @@ export class HeroDetailComponent implements OnInit {
 
     goBack(): void {
         this.location.back();
+    }
+
+    save(): void {
+        this.heroService.update(this.hero)
+            .then(() => this.goBack());
     }
 }
